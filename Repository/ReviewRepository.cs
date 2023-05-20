@@ -18,22 +18,22 @@ public class ReviewRepository: IReviewRepository
 
     public ICollection<Review> GetReviews()
     {
-        return _context.Reviews.ToList();
+        return _context.Review.ToList();
     }
 
     public Review GetReview(int reviewId)
     {
-        return _context.Reviews.Where(r => r.Id == reviewId).FirstOrDefault();
+        return _context.Review.Where(r => r.Id == reviewId).FirstOrDefault();
     }
 
     public ICollection<Review> GetReviewsOfAPokemon(int pokeId)
     {
-        return _context.Reviews.Where(r => r.Pokemon.Id == pokeId).ToList();
+        return _context.Review.Where(r => r.Pokemon.Id == pokeId).ToList();
     }
 
     public bool ReviewExists(int reviewId)
     {
-        return _context.Reviews.Any(r => r.Id == reviewId);
+        return _context.Review.Any(r => r.Id == reviewId);
     }
 
     public bool CreateReview(Review review)

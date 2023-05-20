@@ -16,8 +16,8 @@ public class DataContext: DbContext
     public DbSet<Pokemon> Pokemon { get; set; }
     public DbSet<PokemonOwner> PokemonOwners { get; set; }
     public DbSet<PokemonCategory> PokemonCategories { get; set; }
-    public DbSet<Review> Reviews { get; set; }
-    public DbSet<Reviewer> Reviewers { get; set; }
+    public DbSet<Review> Review { get; set; }
+    public DbSet<Reviewer> Reviewer { get; set; }
     
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
